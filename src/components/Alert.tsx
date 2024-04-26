@@ -5,7 +5,14 @@ interface Props {
 }
 
 const Alert = ({ children }: Props) => {
-  return <div className="alert alert-primary">{children}</div>;
+  return (
+    <div
+      className="alert alert-primary alert-dismissable fade show"
+      role="alert"
+    >
+      {children}
+    </div>
+  );
 };
 
 export default Alert;
