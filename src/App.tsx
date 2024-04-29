@@ -6,7 +6,9 @@ function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
   return (
     <div>
-      {alertVisible && <Alert>Alert!</Alert>}
+      {alertVisible && (
+        <Alert onClose={() => setAlertVisibility(false)}>Alert!</Alert>
+      )}
       <Button onClick={() => setAlertVisibility(true)}>My Button</Button>
     </div>
   );
