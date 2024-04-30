@@ -1,6 +1,3 @@
-//component is not currently being used in final product,
-//but could be used for a list with a heading
-
 import { useState } from "react";
 interface Props {
   items: string[]; //array of strings, each string is an item
@@ -8,6 +5,7 @@ interface Props {
   onSelectItem: (item: string) => void; //function that executes when item in list is selected
 }
 
+//component is used for a list with a heading
 function ListGroup({ items, heading, onSelectItem }: Props) {
   //interface type included, attributes listed as parameters
   //useState begins with -1 to represent no index on the list has been clicked, updates state with index of clicked item
